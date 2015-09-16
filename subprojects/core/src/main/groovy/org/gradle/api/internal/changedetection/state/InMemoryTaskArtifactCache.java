@@ -39,11 +39,11 @@ public class InMemoryTaskArtifactCache implements CacheDecorator {
         //at very least, the max size should be provided at creation, by the creator of the cache
         //however, max size is a bit awkward in general and we should look into other options,
         //like using the Weighter and relate the cache size to the available heap, etc.
-        CACHE_CAPS.put("fileSnapshots", 10000);
-        CACHE_CAPS.put("taskArtifacts", 2000);
-        CACHE_CAPS.put("outputFileStates", 3000);
-        CACHE_CAPS.put("fileHashes", 140000);
-        CACHE_CAPS.put("compilationState", 1000);
+        CACHE_CAPS.put("fileSnapshots", 100000);
+        CACHE_CAPS.put("taskArtifacts", 20000);
+        CACHE_CAPS.put("outputFileStates", 30000);
+        CACHE_CAPS.put("fileHashes", 1400000);
+        CACHE_CAPS.put("compilationState", 10000);
 
         //In general, the in-memory cache must be capped at some level, otherwise it is reduces performance in truly gigantic builds
     }
